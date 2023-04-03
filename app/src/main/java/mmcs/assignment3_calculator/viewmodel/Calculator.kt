@@ -10,7 +10,7 @@ interface Calculator {
     var display: ObservableField<String>
 
     // Add new digit to current input and update display
-    fun addDigit(dig: Int)
+    fun addDigit(dig: Number)
 
     // Add a floating point to current input and update display
     fun addPoint()
@@ -28,4 +28,6 @@ interface Calculator {
 
     // Clear entire calculator state
     fun reset()
+
+    fun invertSign()
 }
