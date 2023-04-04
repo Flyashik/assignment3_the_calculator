@@ -28,13 +28,13 @@ class CalculatorViewModel: BaseObservable(), Calculator {
     }
 
     override fun addPoint() {
-        if(!resultVal.contains("."))
+        if(!resultVal.contains(".") && !reset)
             resultVal += "."
         display.set(resultVal)
     }
 
     override fun addOperation(op: Operation) {
-        if(curValue != "")
+        if(curValue != "0" && !reset)
             calculate()
         curValue = resultVal
         curOp = when(op) {
